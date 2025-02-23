@@ -48,6 +48,11 @@ jobs:
           pip install -r "service1/requirements.txt"
           pip install -r "service2/requirements.txt"
           pip install pytest httpx pytest-asyncio
+    
+      - name: Build Docker images
+        working-directory: Lab Work №5/src
+        run: |
+          docker-compose build
 
       # Шаг 6: Запуск сервисов с помощью Docker Compose
       - name: Start services with Docker Compose
