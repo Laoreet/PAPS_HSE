@@ -18,14 +18,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # Шаг 1: Выгрузка кода из ветки LabWork5
       - name: Checkout code
         uses: actions/checkout@v3
         with:
           ref: LabWork5  # Указываем ветку LabWork5
-
-      # Шаг 1: Выгрузка кода из репозитория
-      - name: Checkout code
-        uses: actions/checkout@v3
 
       # Шаг 2: Установка Python
       - name: Set up Python
@@ -47,7 +44,6 @@ jobs:
       - name: Install dependencies
         working-directory: Lab Work №5/src
         run: |
-          ls
           python -m pip install --upgrade pip
           pip install -r "service1/requirements.txt"
           pip install -r "service2/requirements.txt"
