@@ -2,11 +2,15 @@ name: CI for Lab Work №5 (src)
 
 on:
   push:
+    branches:
+      - LabWork5
     paths:
-      - "Lab Work №5/src/**"  # Запускать только при изменениях в Lab Work №5/src
+      - "Lab Work №5/src/**"
   pull_request:
+    branches:
+      - LabWork5
     paths:
-      - "Lab Work №5/src/**"  # Запускать только при изменениях в Lab Work №5/src
+      - "Lab Work №5/src/**"
 
 jobs:
   test:
