@@ -60,7 +60,7 @@ jobs:
 
       # Шаг 6: Запуск сервисов с помощью Docker Compose
       - name: Start services with Docker Compose
-        working-directory: ./Lab Work №5/src
+        working-directory: Lab Work №5/src
         run: |
           docker-compose -p src up -d
 
