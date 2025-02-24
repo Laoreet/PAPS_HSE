@@ -52,7 +52,8 @@ jobs:
       - name: Build Docker images
         working-directory: Lab Work №5/src
         run: |
-          docker-compose -p src build --no-cache service2
+          docker-compose -p src build
+          docker images
 
       - name: List Docker images
         run: |
@@ -62,7 +63,7 @@ jobs:
       - name: Start services with Docker Compose
         working-directory: Lab Work №5/src
         run: |
-          docker-compose -p src up -d --no-pull
+          docker-compose -p src up -d
 
       # Шаг 7: Ожидание запуска сервисов
       - name: Wait for services to start
