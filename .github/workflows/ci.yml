@@ -52,7 +52,7 @@ jobs:
       - name: Build Docker images
         working-directory: Lab Work №5/src
         run: |
-          docker-compose build
+          docker-compose -p src build
 
       - name: List Docker images
         run: |
