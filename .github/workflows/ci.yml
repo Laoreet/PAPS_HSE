@@ -68,7 +68,7 @@ jobs:
       # Шаг 7: Ожидание запуска сервисов
       - name: Wait for services to start
         run: |
-          sleep 10  # Ждем 10 секунд
+          sleep 15  # Ждем 10 секунд
 
       # Шаг 8: Запуск интеграционных тестов
       - name: Run integration tests
