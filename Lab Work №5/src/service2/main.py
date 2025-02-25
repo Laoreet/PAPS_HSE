@@ -9,7 +9,7 @@ from utils.model_utils import MedicalNet, get_attention_map_base64
 app = FastAPI()
 
 # Глобальные переменные
-UPLOAD_FOLDER = "../service1/uploads"  # Путь к папке с загруженными файлами
+UPLOAD_FOLDER = "uploads"  # Путь к папке с загруженными файлами
 
 # Модели для ответа
 class ResultResponse(BaseModel):
@@ -47,6 +47,7 @@ model.eval()
 async def process_files(request: ProcessRequest):
     study_id = request.id
     study_folder = os.path.join(UPLOAD_FOLDER, study_id)
+    print(os.listdir(UPLOAD_FOLDER))
     if not os.path.exists(study_folder):
         raise HTTPException(status_code=404, detail=f"Study with ID '{study_id}' not found.")
 
