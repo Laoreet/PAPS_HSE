@@ -52,7 +52,7 @@ jobs:
       - name: Build Docker images
         working-directory: Lab Work №5/src
         run: |
-          docker-compose -p src build
+          docker-compose build
           docker images
 
       - name: List Docker images
@@ -63,7 +63,7 @@ jobs:
       - name: Start services with Docker Compose
         working-directory: Lab Work №5/src
         run: |
-          docker-compose -p src up -d
+          docker-compose up -d
 
       # Шаг 7: Ожидание запуска сервисов
       - name: Wait for services to start
@@ -81,4 +81,4 @@ jobs:
         if: always()
         working-directory: Lab Work №5/src
         run: |
-          docker-compose -p src down
+          docker-compose down
