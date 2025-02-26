@@ -53,13 +53,13 @@ jobs:
       - name: Build Docker image for service 1
         working-directory: Lab Work №5/src/service1
         run: |
-          docker build
+          docker build -t src-service1 .
           docker images
 
       - name: Build Docker image for service 2
         working-directory: Lab Work №5/src/service2
         run: |
-          docker build
+          docker build -t src-service2 .
           docker images
 
       - name: Wait for services to start
