@@ -49,8 +49,14 @@ jobs:
           pip install -r "service2/requirements.txt"
           pip install pytest httpx pytest-asyncio
     
-      - name: Build Docker images
-        working-directory: Lab Work №5/src
+      - name: Build Docker image for service 1
+        working-directory: Lab Work №5/src/service1
+        run: |
+          docker-compose build
+          docker images
+
+      - name: Build Docker image for service 2
+        working-directory: Lab Work №5/src/service2
         run: |
           docker-compose build
           docker images
